@@ -2,10 +2,29 @@ import React from "react";
 import { useRef } from "react";
 import { FaEnvelope, FaMapMarkedAlt, FaPhone } from "react-icons/fa";
 //Activity 3: Import emailjs
-//import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  //Copy code from docs to allow sending emails via Emailjs
+  //Activity 3: Copy code from docs to allow sending emails via Emailjs
+  // In below code, replace the service ID, template ID and public keys with your own ones from your account
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
+        publicKey: "YOUR_PUBLIC_KEY",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <div className="bg-black text-white py-20" id="contact">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
@@ -43,7 +62,7 @@ export default function Contact() {
           <div className="flex-1 w-full">
             {/* Activity 3: Connect form to EmailJS*/}
 
-            <form className="space-y-4">
+            <form ref={form} onSubmit={sendEmail} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block mb-2">
                   Your Name
