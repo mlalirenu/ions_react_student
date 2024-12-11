@@ -34,8 +34,11 @@ Configure your template files in 'tailwind.config.js' file. Add the highlighted 
 ![alt text](readmeImages/image-16.png)
 
 Add the following @tailwind directives to your ./src/index.css file.
+
 @tailwind base;
+
 @tailwind components;
+
 @tailwind utilities;
 
 Your folder should now look like this:
@@ -45,7 +48,9 @@ Your folder should now look like this:
 Additional items to set up for React-portfolio:
 
 npm install react-icons
+
 npm install @emailjs/browser
+
 Create a free account on EmailJS website
 
 ## Activity 1: How to set-up a component in React
