@@ -73,29 +73,29 @@ import React from 'react'
 function Navbar() {
 return (
 
-<div>Navbar</div>
+`<div>Navbar</div>`
 )
 }
 
 export default Navbar
 
-Since we are creating a Navigation bar, we can use a <nav> tag instead of a <div> tag. Inside the <nav> we start adding <div> CSS classes to style the Navbar. Take note that since we are writing in JSX, the syntax for the HTML elements are different, so instead of the typically used 'class' in HTML, we use 'className'.
+Since we are creating a Navigation bar, we can use a `<nav>` tag instead of a `<div>` tag. Inside the `<nav>` we start adding `<div>` CSS classes to style the Navbar. Take note that since we are writing in JSX, the syntax for the HTML elements are different, so instead of the typically used 'class' in HTML, we use 'className'.
 
 #### How to use Tailwind CSS in your code:
 
-For example, in the <nav> tag:
+For example, in the `<nav>` tag:
 
- <nav className="bg-black text-white py-4">
-  <div className="container mx-auto flex justify-between items-center">
-   
-  </div>
-</nav>
+`<nav className="bg-black text-white py-4">`
+`<div className="container mx-auto flex justify-between items-center">`
+
+`</div>`
+`</nav>`
 
 **bg-black:** Sets background colour to black
 **text-white:** Makes the text white.
 **py-4:** Adds padding on the top and bottom.
 
-Then in the next <div> tag and class created,
+Then in the next `<div>` tag and class created,
 
 **container mx-auto:** Centers the content and limits its width.
 **flex justify-between items-center:** Creates a horizontal layout with space between items and vertical alignment.
@@ -104,17 +104,17 @@ and so on.
 
 #### How to set up links to various parts of your portfolio page
 
-For navigation, <a> are usually used, with a href attribute pointing to a section of the page. The section needs to have an id in its <div> tag so that browser knows where to navigate when the link is clicked
+For navigation, `<a>` are usually used, with a href attribute pointing to a section of the page. The section needs to have an id in its `<div>` tag so that browser knows where to navigate when the link is clicked
 
 In this case, we will use the Service portion as an example for how to setup links.
-Put 'id=service' in the first <div> tag of the Service component . It should look like this:
+Put 'id=service' in the first `<div>` tag of the Service component . It should look like this:
 
-<div className="bg-black text-white py-20" id="service">
+`<div className="bg-black text-white py-20" id="service">`
 
 Back in the Navbar component, type the id name given for the href attribute for Service link:
-<a href="#service" className="hover:text-gray-400">
+`<a href="#service" className="hover:text-gray-400">`
 Service
-</a>
+`</a>`
 
 And from here it should start working. Make sure that the spelling in the id given in Service component and in the href matches up.
 
@@ -136,10 +136,10 @@ So instead I will put the data in an array, and get them generated dynamically b
 An array of objects named experienceData is created. Each object has the category i want (e.g. front-end or back-end), as well as an array of objects for skills, which in turn contain skill name and level for each object.
 ![alt text](readmeImages/image-12.png)
 
-Then, the map() function is used in return statement, looping over each object in the experienceData array, creating a <div> for each category. Category name dynamically created and displayed using {category.category}
+Then, the map() function is used in return statement, looping over each object in the experienceData array, creating a `<div>` for each category. Category name dynamically created and displayed using {category.category}
 ![alt text](readmeImages/image-13.png)
 
-Similarly, another map function is used (inside the map function used for category) for skills, looping over each object in the skills array, creating an <article> for each skill.
+Similarly, another map function is used (inside the map function used for category) for skills, looping over each object in the skills array, creating an `<article>` for each skill.
 ![alt text](readmeImages/image-14.png)
 
 Demo: Projects.jsx
@@ -151,7 +151,7 @@ b) add 2 new properties called image and github to the array, where you need to 
 The CSS has already been written for you, so you only need to figure out how to implement the map function then how to add on to it
 Answer:
 ![alt text](readmeImages/image-15.png)
-Note: We are using <a> tag for github button instead of <button> since it requires navigation to another website
+Note: We are using `<a>` tag for github button instead of `<button>` since it requires navigation to another website
 
 ## Activity 3: How to set up a functional Contact form using EmailJS
 
@@ -167,6 +167,6 @@ Next, create a template. Remember that for whatever arrangement you have, you ne
 Now, take note of your service id (in the email service created), your template id(in the email template you created), and your public key (under Account)
 ![alt text](readmeImages/image-10.png)
 
-Paste them into placeholder text in the Contact component (taken from here [link](https://www.emailjs.com/docs/examples/reactjs/))
+Paste them into placeholder text in the Contact component (taken from here [React EmailJS Docs](https://www.emailjs.com/docs/examples/reactjs/))
 
-Finally, add 'ref={form} onSubmit={sendEmail}' in the <form> element and you're done! You should now be able to send messages from your contact form to your preferred email
+Finally, add 'ref={form} onSubmit={sendEmail}' in the `<form>` element and you're done! You should now be able to send messages from your contact form to your preferred email
