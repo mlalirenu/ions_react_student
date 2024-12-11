@@ -70,14 +70,13 @@ Code breakdown:
 Start with this code template:
 import React from 'react'
 
+```jsx
 function Navbar() {
-return (
-
-`<div>Navbar</div>`
-)
+  return <div>Navbar</div>;
 }
 
-export default Navbar
+export default Navbar;
+```
 
 Since we are creating a Navigation bar, we can use a `<nav>` tag instead of a `<div>` tag. Inside the `<nav>` we start adding `<div>` CSS classes to style the Navbar. Take note that since we are writing in JSX, the syntax for the HTML elements are different, so instead of the typically used 'class' in HTML, we use 'className'.
 
