@@ -30,18 +30,8 @@ npx tailwindcss init -p
 
 This should generate your 'tailwind.config.js' and 'postcss.config.js' files.
 
-Configure your template files in 'tailwind.config.js' file. Add the bolded portion in content
-/** @type {import('tailwindcss').Config} **/
-export default {
-content: [
-\_\_"./index.html",
-"./src/**/.{js,ts,jsx,tsx}",\_\_
-],
-theme: {
-extend: {},
-},
-plugins: [],
-}
+Configure your template files in 'tailwind.config.js' file. Add the highlighted portion in content
+![alt text](readmeImages/image-16.png)
 
 Add the following @tailwind directives to your ./src/index.css file.
 @tailwind base;
@@ -49,6 +39,7 @@ Add the following @tailwind directives to your ./src/index.css file.
 @tailwind utilities;
 
 Your folder should now look like this:
+
 ![alt text](readmeImages/image-5.png)
 
 Additional items to set up for React-portfolio:
