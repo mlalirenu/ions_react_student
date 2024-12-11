@@ -43,6 +43,7 @@ Your folder should now look like this:
 ![alt text](readmeImages/image-5.png)
 
 Additional items to set up for React-portfolio:
+
 npm install react-icons
 npm install @emailjs/browser
 Create a free account on EmailJS website
