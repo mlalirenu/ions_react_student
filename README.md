@@ -84,11 +84,11 @@ Since we are creating a Navigation bar, we can use a `<nav>` tag instead of a `<
 
 For example, in the `<nav>` tag:
 
-`<nav className="bg-black text-white py-4">`
-`<div className="container mx-auto flex justify-between items-center">`
-
-`</div>`
-`</nav>`
+```jsx
+<nav className="bg-black text-white py-4">
+  <div className="container mx-auto flex justify-between items-center"></div>
+</nav>
+```
 
 **bg-black:** Sets background colour to black
 **text-white:** Makes the text white.
@@ -111,9 +111,12 @@ Put 'id=service' in the first `<div>` tag of the Service component . It should l
 `<div className="bg-black text-white py-20" id="service">`
 
 Back in the Navbar component, type the id name given for the href attribute for Service link:
-`<a href="#service" className="hover:text-gray-400">`
-Service
-`</a>`
+
+```jsx
+<a href="#service" className="hover:text-gray-400">
+  Service
+</a>
+```
 
 And from here it should start working. Make sure that the spelling in the id given in Service component and in the href matches up.
 
